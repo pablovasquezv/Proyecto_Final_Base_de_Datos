@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3EEB1206-3922-C6DA-9513-46485173098A" name="HORARIOS">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-04 03:52:34 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<ordsAlias>table_16</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_HORARIOS" id="2F0415F1-007C-5307-D26E-C215ED7BC10E">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-04 03:53:09 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_PROFESOR" id="11AF0360-8AD9-1675-1AED-2BFC6B7F427E">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 05:28:47 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E040BC1C-EE5C-E618-4FC3-728A47FA60EE" referredColumn="0482E951-DBA6-CD48-CA8E-67BEF05B2271"/>
+</associations>
+</Column>
+<Column name="CURSO_CURSO" id="BFEC7967-578E-5EB2-CCD7-1B33DE1E7123">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 19:16:19 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2A08B415-B1FA-8EB1-F6FB-48568009B587" referredColumn="A75C0A22-EE6E-8ECC-10B7-4E2F46B05E93"/>
+</associations>
+</Column>
+<Column name="FECHA" id="C51FFB60-941F-9624-92B2-254C4510AFD2">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 19:15:18 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CB207481-2268-6C82-E67C-DB2F6702FBD7" name="HORARIOS_PK">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-04 03:55:29 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F0415F1-007C-5307-D26E-C215ED7BC10E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="474AE211-01C9-C386-2429-E757A9441E7C" name="HORARIOS_PROFESORES_FK">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 05:28:47 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="11AF0360-8AD9-1675-1AED-2BFC6B7F427E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24CC1FF1-31B1-06BE-59E4-9B2CB16D448C" name="HORARIOS_CURSOS_FK">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 19:16:19 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BFEC7967-578E-5EB2-CCD7-1B33DE1E7123"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

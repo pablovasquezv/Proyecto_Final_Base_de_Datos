@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="MODELO_RELACIONAL_COLEGIO" id="81228579-E190-A006-CED4-87BCBD9F0A21" version="3.5">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-02 17:43:09 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>81228579-E190-A006-CED4-87BCBD9F0A21</designId>
+</OSDM_Design>

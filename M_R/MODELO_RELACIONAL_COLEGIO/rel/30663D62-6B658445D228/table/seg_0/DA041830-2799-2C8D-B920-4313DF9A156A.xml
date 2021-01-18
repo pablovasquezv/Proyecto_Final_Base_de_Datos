@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DA041830-2799-2C8D-B920-4313DF9A156A" name="MATRICULAS">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-02 17:56:27 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_MATRICULAS" id="47FBB184-A707-88BF-90D4-EDA449DA1B60">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-02 18:20:33 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_ALUMNO" id="A6F5D9EF-A4D8-D686-14B9-D34B35FFA193">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 05:05:24 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="04AA1802-67DB-5F36-B6BC-AD4867D65E69" referredColumn="91DB5209-9562-0A1C-E059-1E5F69EA9BFD"/>
+</associations>
+</Column>
+<Column name="FECHA" id="A633FD9B-34A8-E3C7-FD6A-F51A78535BCD">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-02 18:27:08 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BCF29355-46CE-47E9-7797-6AF39F5DD1AE" name="MATRICULAS_PK">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-02 18:20:33 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47FBB184-A707-88BF-90D4-EDA449DA1B60"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4FABC83C-2D0D-7FDF-25FD-509D380B2D85" name="MATRICULAS_ALUMNOS_FK">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 05:05:24 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6F5D9EF-A4D8-D686-14B9-D34B35FFA193"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

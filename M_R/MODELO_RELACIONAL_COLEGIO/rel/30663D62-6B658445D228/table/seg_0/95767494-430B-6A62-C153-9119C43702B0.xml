@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="95767494-430B-6A62-C153-9119C43702B0" name="EVALUACIONES">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-02 18:51:59 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<ordsAlias>table_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_EVALUACIONES" id="BEE43F3B-034D-F22D-EC24-43E764C275DF">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-02 18:53:43 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_ASIGNATURA" id="FF981882-7C72-E7DB-4433-28D913BAAE35">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 06:01:39 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BBBC9C1C-0202-637F-AE11-F40330C760F5" referredColumn="C25DEC5A-1C7D-F345-FB1C-589631C97C30"/>
+</associations>
+</Column>
+<Column name="CODIGO_PROFESOR" id="633CDDE4-1227-651B-87E2-249905254F9E">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 05:23:40 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A7E94484-2092-1595-1F87-3CCC9E6DDDD8" referredColumn="0482E951-DBA6-CD48-CA8E-67BEF05B2271"/>
+</associations>
+</Column>
+<Column name="CODIGO_ALUMNO" id="DEB4C6D1-DFE7-745C-786A-2F45C9489471">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 05:16:56 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CBB0327F-82A7-3629-6049-6724382DA73A" referredColumn="91DB5209-9562-0A1C-E059-1E5F69EA9BFD"/>
+</associations>
+</Column>
+<Column name="NOTA" id="DBC34BCD-25E6-9BD1-2E54-F71AAF7D025C">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-02 19:04:49 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA" id="E99BF9A0-49A9-4BA8-F057-145B5D07E41C">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-04 04:02:58 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="68A4BE83-2261-B256-6360-5FA82A02D7C2" name="EVALUACIONES_PK">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-02 18:53:43 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BEE43F3B-034D-F22D-EC24-43E764C275DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A3969064-891F-3F66-483A-3D7A3A650FFE" name="EVALUACIONES_ALUMNOS_FK">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 05:16:56 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DEB4C6D1-DFE7-745C-786A-2F45C9489471"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="391A5BCB-EAF1-7503-4736-4FC1C0D625F8" name="EVALUACIONES_PROFESORES_FK">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 05:23:40 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="633CDDE4-1227-651B-87E2-249905254F9E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C90740B1-929D-8DB4-4115-8951386C4F9E" name="EVALUACIONES_ASIGNATURAS_FK">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 06:01:39 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF981882-7C72-E7DB-4433-28D913BAAE35"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

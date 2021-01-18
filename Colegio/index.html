@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<!--Para que reconosca ancento-->
+	<meta charset="UTF-8">
+	<!--Para que el sitio web se adapte adispositivos moviles-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--Agregamos bootstrap-->
+	<link rel="stylesheet" href="librerias/css/bootstrap.min.css">
+	<!--Agremos las hojas de estilos  y javaScript con esta etiqueta-->
+	<link rel="stylesheet" href="librerias/css/estilosCss.css" />
+	<!--Agregamos los estilos de la tabla-->
+	<link rel="stylesheet" href="librerias/css/dataTables.bootstrap.min.css" />
+	<!--Agregamos los estilos de la tabla-->
+	<link rel="stylesheet" href="librerias/css/dataTables.jqueryui.css" />
+	<!--Agregamos las librerias  Alertyfy al documento-->
+	<link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/alertify.css">
+	<!--Agregamos la libreria JQuery-->
+	<script src="librerias/js/jquery-3.2.1.min.js"></script>
+	<!--Agregamos las librerias bootstrap.js-->
+	<script src="librerias/js/bootstrap.min.js"></script>
+	<!--Escript paginación-->
+	<script src="librerias/js/jquery.dataTables.min.js"></script>
+	<!--Agregamos las funciones JavaScript-->
+	<script src="librerias/funcionesJs/funciones.js"></script>
+	<!--Agregamos las librerias de alerta alerty.js mostrar un mensaje -->
+	<script src="librerias/alertifyjs/alertify.js"></script>
+	<title> Productos</title>
+</head>
+
+<body>
+
+
+	<!--Creamos el menu de navegación -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+		<a class="navbar-brand" href="#">Menú</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html"><b>Inicio</b><span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="apoderados.html"><b>Apoderados</b> <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="alumnos.html"><b>Alumnos</b><span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="cursos.html"><b>Cursos</b><span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="departamentos.html"><b>Departamentos </b><span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="matriculas.html"><b>Matriculas</b><span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="profesores.html"><b>Profesores</b> <span class="sr-only"></span></a>
+                </li>
+            </ul>
+		</div>
+	</nav>
+
+	<hr>
+	<!--Margenes-->
+	<div class="responsive">
+		<!--Car-->
+		<div class="container my-3">
+			<!--Agregamos las  con la  clase row Columnas-->
+			<div class="row">
+				<!--Diseñar Carrucel de imagenes  con la cantidad de columnas que tiene-->
+				<div class="col-sm-8">
+					<!--otorgamos el nombre al carrucel id="slide1"-->
+					<!--class="carousel slide carousel-fade" es la propiedad con la que se mostraran las imagenes-->
+					<!--data-ride="carousel" es para el tipo carrucel-->
+					<div id="slide1" class="carousel slide carousel-fade" data-ride="carousel">
+						<div class="carousel-inner">
+							<!-- Indicatores de Carrusel -->
+							<ol class="carousel-indicators">
+								<li data-target="#slide1" data-slide-to="0" class="active"></li>
+								<li data-target="#slide1" data-slide-to="1"></li>
+								<li data-target="#slide1" data-slide-to="2"></li>
+
+							</ol>
+							<!--Esta sera la primera imagen que se muestre y utilizamos la class="carousel-item active"-->
+							<div class="carousel-item active" role="listbox">
+								<!--Agregamos la ruta de las imagenes class="img-thumbnail" para que se mueste un borde en las imagenes
+					  alt="Third slide" para que se muestre 5 segundo la imagen al cargar la pagina y luego avance a la siguente-->
+								<img src="librerias/imagenes/colegio1.jpg" class="img-thumbnail" class="d-block w-80"
+									alt="Third slide" data-toggle="tooltip" data-placemet="top" width="304" height="550"
+									title="Audi R8 V10 Plus">
+							</div>
+							<!-- class="carousel-item , alt="Second slide" para el cambio de imagen-->
+							<div class="carousel-item">
+								<img src="librerias/imagenes/colegio2.jpg" class="img-thumbnail" class="d-block w-80"
+									alt="Second slide" data-toggle="tooltip" data-placemet="top" width="304"
+									height="550" title="Ford Mustang Shelbys Gt350">
+							</div>
+							<!-- class="carousel-item , alt="Second slide" para el cambio de imagen-->
+							<div class="carousel-item">
+								<img src="librerias/imagenes/colegio3.jpg" class="img-thumbnail" alt="Second slide"
+									data-toggle="tooltip" data-placemet="top" width="304" height="550"
+									title="Aston Martin DB11">
+							</div>
+							<div class="carousel-item">
+								<img src="librerias/imagenes/colegio2.jpg" class="img-thumbnail" alt="Second slide"
+									data-toggle="tooltip" data-placemet="top" width="304" height="550"
+									title="Aston Martin DB11">
+							</div>
+							<!-- class="carousel-item , alt="Second slide" para el cambio de imagen
+				  data-toggle="tooltip" es para llamar la funcion
+				  data-placemet="top" posicion del mensaje -->
+
+
+							<a class="carousel-control-prev" href="#slide1" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Anterior</span>
+							</a>
+							<!--CreamoS los botones para avanzara y retroceder las imagen 
+					   class="carousel-control-prev" es para el control del las imagenes con un icono 
+					   href="#slide1" para el nombre del carrusel con un # y el nombre hacemos la referencia
+					   role="button" especificamos que es un boton
+					   data-slide="next" muestra la imagen del boton 
+					  aria-hidden="true" para que se muestre el boton dentro del carrucel-->
+							<a class="carousel-control-next" href="#slide1" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Siguiente</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!---Agremamos un area de texto dentro la costado derecho con cuatro columnas con id para el color del contorno-->
+				<div class="col-sm-4" id="texto">
+					<div class="well" id="principal">
+						<div class="responsive">
+							<p class=" responsive lead text-center"> <br>
+								Somos un colegio, que busca formar personas capaces de
+								comprender y transformar la realidad; de enfrentar cambios y desafíos,
+								tanto naturales como sociales; con autonomía<br> de juicio y que encarnen
+								los valores propios del bien común, tales como<br> la honestidad, la tolerancia,
+								la aceptación de la diversidad, la solidaridad, la justicia, la conciencia
+								ciudadana y el respeto por el medio ambiente y la persona. </p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<hr>
+	<!--Agregamos la Tabla-->
+
+	<br></br>
+	<div class="container text-center">
+		<h3>Actividades</h3>
+		<br>
+		<div class="row">
+			<div class="col-sm-4">
+				<img src="librerias/imagenes/niños3.jpg" class="img-thumbnail" class="img-responsive" style="width:100%"
+					alt="Image">
+				<p class="lead">Nuestros Docentes</p>
+			</div>
+			<div class="col-sm-4">
+				<img src="librerias/imagenes/colegioChileno1.jpg" class="img-thumbnail" class="img-responsive"
+					style="width:100%" alt="Image">
+				<p class="lead">Deportes</p>
+			</div>
+			<div class="col-sm-4">
+				<div class="well" id="principal">
+					<p class="lead">
+						El colegio busca favorecer al máximo las posibilidades
+						de cada estudiante, respetando los particulares ritmos
+						y modos de aprendizaje y promoviendo la superación permanente
+						de sus miembros respecto de sí mismos.
+					</p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<br></br>
+		<!--Galeria-->
+		<div class="container text-center" id="Imagenes">
+			<h3>Convivencia Escolar</h3>
+			<br>
+			<div class="row">
+				<div class="col-sm-2">
+					<img src="librerias/imagenes/niños2.jpg" class="img-thumbnail" class="img-responsive"
+						style="width:100%" alt="Image" title="MCLAREN 570">
+					<p class="lead">Primeros Básicos</p>
+				</div>
+				<div class="col-sm-2">
+					<img src="librerias/imagenes/niños5.jpg" class="img-thumbnail" class="img-responsive"
+						style="width:100%" alt="Image" title="Audi R8">
+					<p class="lead">Quinto Basicos</p>
+				</div>
+				<div class="col-sm-2">
+					<img src="librerias/imagenes/niños3.jpg" class="img-thumbnail" class="img-responsive"
+						style="width:100%" alt="Image" title="Bmw M5">
+					<p class="lead">Tercero Básicos</p>
+				</div>
+				<div class="col-sm-2">
+					<img src="librerias/imagenes/niños4.jpg" class="img-thumbnail" class="img-responsive"
+						style="width:100%" alt="Image" title="Bugatti Chiron">
+					<p class="lead">Artes Manuales</p>
+				</div>
+				<div class="col-sm-2">
+					<img src="librerias/imagenes/niños5.jpg" class="img-thumbnail" class="img-responsive"
+						style="width:100%" alt="Image" title="Shelbys Gt350 ">
+					<p class="lead">Nuestras Aulas</p>
+				</div>
+				<div class="col-sm-2">
+					<img src="librerias/imagenes/colegioChileno1.jpg" class="img-thumbnail" class="img-responsive"
+						style="width:100%" alt="Image" title="Aston Martin DB1">
+					<p class="lead">Deportes</p>
+				</div>
+			</div>
+		</div>
+		<br>
+
+		<div align="center">
+			<!--contenedor de tabla y Seleccion de archivo-->
+			<div class="container table-responsive">
+				<div class="row">
+					<div class="col">
+						<h4>Horario de atencion</h4>
+						<table class="table-bordered">
+							<thead>
+								<tr>
+									<th scope="col">Lunes</th>
+									<th scope="col">Martes</th>
+									<th scope="col">Miercoles</th>
+									<th scope="col">Jueves</th>
+									<th scope="col">viernes</th>
+									<th scope="col">Sabado</th>
+									<th scope="col">Domingo</th>
+								</tr>
+
+							</thead>
+							<tbody>
+								<tr>
+									<td>10:00-20:00</td>
+									<td>10:00-20:00</td>
+									<td>10:00-20:00</td>
+									<td>10:00-20:00</td>
+									<td>10:00-20:00</td>
+									<td>10:00-20:00</td>
+									<td>11:00-20:00</td>
+								</tr>
+							</tbody>
+						</table>
+						<br>
+
+					</div>
+					<div class="col" id="formulario">
+						<!--SELECCIONA UN ARCHIVO-->
+						<h4>¿Deseas trabajar con nosotros?</h4>
+						<h6>Envianos tu curriculum y te evaluamos</h6>
+						<div style="width:300px;height:35px">
+							<div class="custom-file">
+								<input type="file" class="custom-file-input" id="customFile">
+								<label class="custom-file-label" for="customFile">Adjuntar curriculum
+								</label>
+							</div>
+						</div>
+
+						<br></br>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br></br>
+
+		<!--informacion-->
+
+		<div class="container" align="center">
+			<div class="row">
+				<div class="col-sm">
+					<div align="left">
+						<b>Convenios</b><br></br>
+						<a href="#">Tiendas</a>
+						<br>
+						<a href="#">Pedidos</a>
+						<br>
+						<a href="#">Servicio tecnico</a>
+					</div>
+					<br>
+
+				</div>
+				<div class="col-sm">
+					<div align="left">
+						<b>Informacion</b><br></br>
+
+						<a href="#">Preguntas frecuentes</a>
+						<br>
+						<a href="#">terminos y condiciones</a>
+						<br>
+						<a href="#">sobre nosotros</a>
+					</div>
+					<br>
+
+				</div>
+				<div class="col-sm">
+					<div align="left">
+						<b>Contactos</b><br></br>
+
+						<a href="#">Nuestro WhatsApp</a>
+						<br>
+						<a href="#">Buscanos en facebook</a>
+						<br>
+						<a href="#">ventasEscuela@gmail.com</a>
+					</div>
+					<br>
+				</div>
+			</div>
+		</div>
+
+		<br></br>
+		<!---Pie de pagina-->
+		<!--Creamos el pie de pagina donde va la informaci�n principal-->
+		<!---Pie de pagina-->
+		<div class="row ">
+			<div class="col-sm-12 ">
+				<p align="center">Derechos Reservados 2018-2019 &copy; </p>
+			</div>
+		</div>
+</body>
+<!--Agregamos los jquery boostrap-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	crossorigin="anonymous"></script>
+<!--Agregamos los estilos Js al-->
+<script src="js/bootstrap.min.js"></script>
+<!--PARA EL BUSCADOR-->
+<script>
+	$(".custom-file-input").on("change", function () {
+		var fileName = $(this).val().split("\\").pop();
+		$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+	});
+</script>
+<!--funcion del boton y imagenes que muestren un texto la posicionar el mouse sobre ellos-->
+<script>
+	//Funcion que muestra un mensaje al boton
+	$(function () {
+		//Para cuando se mouse para sobre el data-toggle="tooltip" es el identificado del boton y imagen
+		$('{data-toggle="tooltip"}').tooltip()
+	})
+</script>
+</html>
+</body>
+
+</html>

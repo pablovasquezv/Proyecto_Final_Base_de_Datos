@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8E35A3D7-BB89-A7A8-29D2-C28231A3428B" name="SEMESTRES">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 19:19:56 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<ordsAlias>table_23</ordsAlias>
+<useDDLTransformationScript>true</useDDLTransformationScript>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_SEMESTRE" id="2CE164D1-19AF-18D9-6EDF-B21ECB3440B0">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 19:20:33 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_CURSO" id="C9EB4718-A6B1-D83E-E395-CEDAB26D9C72">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 19:22:39 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4DE5F767-CC1F-0967-2797-6F2270D466F7" referredColumn="A75C0A22-EE6E-8ECC-10B7-4E2F46B05E93"/>
+</associations>
+</Column>
+<Column name="CODIGO_ASISTENCIAS" id="35FC6062-7D79-102A-AB3A-DFC4E1F11838">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 19:27:43 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="556362AA-89F5-4E97-EFDB-D21016E99FFE" referredColumn="51A030D1-965B-8D2C-0078-FECB661FCDF9"/>
+</associations>
+</Column>
+<Column name="FECHA_INICIO" id="88F466EA-B4BB-E7B6-8378-8D99FF2BEC0E">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 19:25:05 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_TERMINO" id="26F94595-A528-5251-3174-F0AB77AA4A87">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 19:30:38 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="98DB764A-E42F-5A85-8154-C0EC75D61921" name="SEMESTRES_PK">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 19:21:00 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2CE164D1-19AF-18D9-6EDF-B21ECB3440B0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="43446E59-A859-C030-C3A1-B1AD292CC4F2" name="SEMESTRES_CURSOS_FK">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 19:22:39 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C9EB4718-A6B1-D83E-E395-CEDAB26D9C72"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DA1D8358-85AA-7D21-6301-7BA9A439DCA4" name="SEMESTRES_ASISTENCIAS_FK">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-09 19:27:43 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35FC6062-7D79-102A-AB3A-DFC4E1F11838"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

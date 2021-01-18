@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="40133D34-32D4-81E5-35C4-6090F78CC768" name="DEPARTAMENTOS">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-02 19:08:34 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="D_DEPARTAMENTO" id="E95086CD-8291-E49A-0E65-48A12BCD840F">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-02 19:09:47 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="D_DESCRIPCION" id="762A48A8-318B-4873-F4A2-4AB5EC2F43B2">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-02 19:09:47 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="78760349-2BC3-BA3B-9F97-F0AB6E98202D" name="DEPARTAMENTO_PK">
+<createdBy>Pablo</createdBy>
+<createdTime>2019-07-02 19:10:30 UTC</createdTime>
+<ownerDesignName>MODELO_RELACIONAL_COLEGIO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E95086CD-8291-E49A-0E65-48A12BCD840F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

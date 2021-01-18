@@ -1,0 +1,82 @@
+<!--Mostramos el formulario para ingresar un Departamento-->
+<div align="center" class="col-sm-12">
+    <form id="frmDepartamentos" method="post">
+        <table whited="30%" class="table display alert-dark mt-3">
+            <tr>
+
+                <td align="center">
+                    <!--Creamos el txt nombre con un id y un nombre-->
+                    <input type="text" class="form-control my-3 text-black" id="txt_CodigoDepartamento"
+                        name="codigoDepartamento" placeholder=" Código del Departamento" autofocus>
+                </td>
+            </tr>
+            <tr>
+
+                <td align="center">
+                    <!--Creamos el txt email con un id y un nombre-->
+                    <input type="text" class="form-control my-3" id="txt_NombreDepartamento" name="Departamento"
+                        placeholder="Nombre del Departamento"></td>
+            </tr>
+        </table>
+        <!-- BOTON QUE TIENE EL EVENTO QUE DISPARA LA FUNCION PARA VALIDAR-->
+        <button id="btn" onclick="agregarDepartamento()" class="btn btn-primary mt-3" data-toggle="collapse"
+            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Guardar</button>
+    </form>
+</div>
+<!--Agregamos el Script para validar las celdas-->
+<script>
+    /**INICIAMOS EL DOCUMENTO AL LLAMAR EL MODAL */
+    $(document).ready(function () {
+        //Creamos un método para la expresion regular para los caracteres Departamento del input.
+        $.validator.addMethod('Departamento', function (value, element) {
+            //Incluimos la expresion regular para los caracteres Departamento del input.
+            return this.optional(element) || /^[a-záéóóúàèìòùäëïöüñ\s]+$/i.test(value);
+        }
+        );
+        //Agregamos el id del formulario para validarlo.
+        $("#frmDepartamentos").validate({
+            event: "blur",
+            //Creamos las reglas para los input.
+            rules: {
+                //Incluimos los metodos y propiedades para el campo codigoDepartamento.
+                'codigoDepartamento': { required: true, number: true, minlength: 1, maxlength: 9 },
+                //Incluimos los metodos y propiedades para el campo Departamento.
+                'Departamento': { required: true, Departamento: true, minlength: 4, maxlength: 50 },
+
+            },
+            //Creamos lo mensajes para cada una de las celdas.
+            messages: {
+                //Creasmos el mensaje para el input del codigoDepartamento.
+                codigoDepartamento: {
+                    //Para mostrar quel campo es requerido.
+                    required: 'EL CAMPO ES REQUERIDO',
+                    //Para cuando no ingresen un números.
+                    number: 'Sólo Números',
+                    minlength: 'El minimo permitido son: 2 caracteres',
+                    //El máximo de caracteres.
+                    maxlength: 'El maximo permitido son 10 caracteres'
+                },
+                //Creasmos el mensaje para el input del latino.
+                Departamento: {
+                    //Para mostrar quel campo es requerido.
+                    required: 'EL CAMPO ES REQUERIDO',
+                    //Para cuando no ingresen letras.
+                    Departamento: 'Sólo letras',
+                    //El minimo de caracteres.
+                    minlength: 'El minimo permitido son: 2 caracteres',
+                    //El máximo de caracteres.
+                    maxlength: 'El maximo permitido son 50 caracteres'
+                }
+
+            },
+            debug: true,
+            errorElement: "label",
+            errorContainer: $("#errores"),
+
+            submitHandler: function (form) {
+                $("#mensaje").html("El mensaje se ha enviado correctamente");
+            }
+        });
+    });
+</script>

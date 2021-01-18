@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Para que reconosca ancento-->
+    <meta charset="UTF-8">
+    <!--Para que el sitio web se adapte adispositivos moviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Agregamos bootstrap-->
+    <link rel="stylesheet" href="librerias/css/bootstrap.min.css">
+    <!--Agregamos los estilos de la tabla-->
+    <link rel="stylesheet" href="librerias/css/dataTables.bootstrap.min.css" />
+    <!--Agregamos los estilos de la tabla-->
+    <link rel="stylesheet" href="librerias/css/dataTables.jqueryui.css" />
+    <!--Agregamos las librerias  Alertyfy al documento-->
+    <link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/alertify.css">
+    <!--Agregamos la libreria JQuery-->
+    <script src="librerias/js/jquery-3.2.1.min.js"></script>
+    <!--Agregamos las librerias bootstrap.js-->
+    <script src="librerias/js/bootstrap.min.js"></script>
+    <!--Escript paginación-->
+    <script src="librerias/js/jquery.dataTables.min.js"></script>
+    <!--Agregamos las funciones JavaScript-->
+    <script src="librerias/funcionesJs/funciones.js"></script>
+    <!--Agregamos las librerias de alerta alerty.js mostrar un mensaje -->
+    <script src="librerias/alertifyjs/alertify.js"></script>
+    <!--Agregamos la libreria js/jquery.validate-->
+    <script src="librerias/js/jquery.validate.min.js"></script>
+    <title>Crud Apoderados</title>
+</head>
+
+<body>
+
+    <!--Creamos el menu de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <a class="navbar-brand" href="#">Menú</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html"><b>Inicio</b><span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="apoderados.html"><b>Apoderados</b> <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="alumnos.html"><b>Alumnos</b><span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="cursos.html"><b>Cursos</b><span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="departamentos.html"><b>Departamentos </b><span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="matriculas.html"><b>Matriculas</b><span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="profesores.html"><b>Profesores</b> <span class="sr-only"></span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <hr>
+
+    <!--Creamos un div para agregar Productos-->
+    <div class="row">
+        <div class="container mt-3">
+            <div class="well well-sm text-left mt-3">
+                <!--btn btn-primary pra darle el dinamismo al botón del enlace- cambia color al pasar el mouse->
+            <!-href=para el impervinculo utiliza llamar al vinculo c=Sucursal-->
+                <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#agregarModal"
+                    onclick="cargarModalAgregarApoderados()"><b>Ingreso de Apoderados</b></button>
+            </div>
+        </div>
+    </div>
+
+    <!--Mostramos la tabla Productos-->
+    <div class="row" align="center">
+        <div class="col-12">
+            <div class=" col-12">
+                <!--Mostramos la tabla de Productos-->
+                <br></br>
+                <div id="resultadosApoderados">aca van los resultados</div>
+                <br></br>
+            </div>
+        </div>
+
+    </div>
+    <!--Mostramos el pie de pagina-->
+    <div align="center" class="col-sm-12">
+        <br></br>
+        <p class="lead text-black">TNS Informática 2019 &copy;</p>
+    </div>
+</body>
+
+</html>
+<!-- Modal  para realizar la Inserción-->
+<!--El modal se crea-->
+<div class="modal " id="agregarModal">
+    <div class="modal-dialog">
+        <!--Agregamos estilo al body del modal bg-dark navbar-dark text-white fondo oscuroy las letras blancas-->
+        <div class="modal-content  bg-light text-black">
+            <!-- Modal cabeza -->
+            <div class="modal-header">
+                <h4 class="modal-title">Ingrese Apoderado</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal Cuerpo -->
+            <!--Agregamos estilo al body del modal bg-dark navbar-dark text-white fondo oscuroy las letras blancas-->
+            <div class="modal-body bg-light text-black">
+                <!---Agregamos el frmAgregar dentro del modal-->
+
+                <div id="frmAgregar"></div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button class="btn btn-danger" id="btnCerrar" data-dismiss="modal" title="Cerrar">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal  para realizar la modificacion-->
+<div class="modal fade" id="modificarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bg-light text-black">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modificar Apoderado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body bg-light text-black">
+                <!---Agregamos el frmModificar dentro del modal-->
+                <div id="frmModificar"></div>
+            </div>
+        </div>
+    </div>
+</div>
